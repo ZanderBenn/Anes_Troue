@@ -1,0 +1,410 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Make sure the header is responsive */
+/* Small, fixed header */
+header {
+    background: rgb(10, 88, 104);
+    height: 50px; /* Small height */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end; /* Aligns button to the right */
+    align-items: end;
+    padding: 10 20px;
+    z-index: 1000;
+}
+
+.menu-text {
+    margin-right: 10px; /* Space between text and button */
+    font-size: 16px;
+    font-weight: 400px;
+    color: #cc9079;
+    font-family: Delius, sans-serif;
+}
+
+/* Menu button (hamburger image) */
+.menu-button {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+    padding-right: 25px;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    margin: 5px 15px; /* Adjust spacing for smaller screens */
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Reduce size slightly for better fit */
+}
+
+/* Popup menu (hidden by default) */
+/* Popup menu (hidden initially, off-screen) */
+.popup-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Start off-screen */
+    width: 250px;
+    height: 100vh; /* Full height */
+    background: white;
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    transition: right 0.3s ease-in-out; /* Smooth slide-in effect */
+    z-index: 999;
+}
+
+/* When menu is open */
+.popup-menu.open {
+    right: 0; /* Slide into view */
+}
+
+/* Menu links */
+.popup-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: rgb(10, 88, 104);
+    font-size: 20px;
+    border-bottom: 1px solid rgba(10, 88, 104, 0.3);
+}
+
+/* Last item shouldn't have a border */
+.popup-menu a:last-child {
+    border-bottom: none;
+}
+
+/* Hover effect */
+.popup-menu a:hover {
+    background: rgb(200, 240, 245);
+    border-radius: 5px;
+}
+
+/* Close button inside menu */
+.close-btn {
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Adjust main container */
+.container {
+    max-width: 90%; /* Makes sure it scales on smaller screens */
+    margin: auto;
+    padding: 20px;
+    background: #c4f0f8;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-top: 60px; /* Adjust for fixed header */
+}
+
+/* Responsive images */
+.bruidspaar img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Center text properly */
+.section {
+    margin: 20px 0;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* Adjust RSVP button */
+.rsvp {
+    background: rgb(10, 88, 104);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Adjust font sizes for smaller screens */
+@media screen and (max-width: 768px) {
+    .charm-bold {
+        font-size: 36px; /* Reduce size on mobile */
+    }
+
+    .petit-formal-script-regular {
+        font-size: 36px;
+    }
+
+    .imperial-script-regular {
+        font-size: 50px;
+    }
+}
+
+/* Mobile adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column; /* Stack menu items vertically */
+        height: auto;
+    }
+
+    header a {
+        font-size: 14px;
+        margin: 5px;
+        display: block;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .rsvp {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+
+.twirly-line {
+    width: 100%; /* Makes it responsive */
+    max-width: 500px; /* Limits max size */
+    height: auto;
+}
+
+.charm-bold-tyd {
+    font-family: "Charm", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 35px;
+}
+
+/*
+.burger {
+    width: 100%; 
+    max-width: 500px; 
+    height: auto;
+    border: 5px solid rgb(10, 88, 104);
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    } */
+
+.burger {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+.pin {
+    width: 100%;
+    max-width: 100px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+}
+
+.center-pin {
+    text-align: center;
+}
+
+.center-pin p {
+    margin-top: -15px;
+}
+
+a img {
+    transition: opacity 0.3s;
+}
+
+a img:hover {
+    opacity: 0.7; /* Fades slightly when hovered */
+}
+
+.voete {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Imported fonts */
+
+.imperial-script-regular {
+    font-family: "Imperial Script", serif;
+    font-weight: 400;
+    font-size: 70px;
+    font-style:normal;
+  }
+  
+  .imperial-script-bold {
+    font-family: "Imperial Script", serif;
+    font-weight: 700;
+    font-size: 46px;
+    font-style:normal;
+  }
+
+.monsieur-la-doulaise-regular {
+    font-family: "Monsieur La Doulaise", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
+.lora {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .charm-regular {
+    font-family: "Charm", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .charm-bold {
+    font-family: "Charm", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+  }
+
+  .petit-formal-script-regular {
+    font-family: "Petit Formal Script", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+  }
+
+  
+.bodoni-moda {
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-style: normal;
+  }
+  
+  .delius-regular {
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  
+.naam {
+    font-family:'Anes & Dewald', sans-serif;
+}
+
+.details {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bruidspaar {
+    margin: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Verrigtinge CSS */
+
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    border-left: 3px solid #0A5868;
+    padding: 20px 0;
+    align-content: center;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    justify-content: space-between;
+}
+
+.branch {
+    width: 70%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.branch img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.branch p {
+    font-size: 18px;
+    color: #333;
+    font-family: Delius, sans-serif;
+    font-weight: 700 ;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background: #0A5868;
+    border-radius: 50%;
+    position: absolute;
+    left: -11px;
+}
+
+.sitplek {
+    padding-left: 0px;
+}
+
+.seremonie {
+    padding-left: 0px;
+}
+
+/* Geskenk Tafel*/
+
+.boodskap {
+    font-family: Delius, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.geskenk {
+    width: 150px;
+    max-width: 150px;
+    margin-top: -50px;
+}
+
+.huisie {
+    width: 200px;
+    max-width: 150px;
+    margin-top: 0px;
+}

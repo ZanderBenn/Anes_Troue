@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Bruilof - Ons Twee</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Charm:wght@400;700&family=Delius&family=Imperial+Script&family=Lora:ital,wght@0,400..700;1,400..700&family=Monsieur+La+Doulaise&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+</head>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("popup-menu");
+        menu.classList.toggle("open"); // Toggle the "open" class
+    }
+    
+    // Close menu when clicking outside
+    document.addEventListener("click", function(event) {
+        var menu = document.getElementById("popup-menu");
+        var button = document.querySelector(".menu-button");
+    
+        if (menu.classList.contains("open") && !menu.contains(event.target) && event.target !== button) {
+            menu.classList.remove("open"); // Hide menu if clicking outside
+        }
+    });
+    </script>
+
+<body>
+    <div class="wrapper-main">
+
+        <header>
+            <div class="menu-container">
+                <span class="menu-text">Burger Menu</span>
+                <img src="Pics\burger_menu-removebg-preview.png" class="menu-button" onclick="toggleMenu()" alt="Menu">
+            </div>
+        </header>
+
+        <!-- Popup Menu -->
+        <div id="popup-menu" class="popup-menu">
+            <span class="close-btn" onclick="toggleMenu()">✖</span> <!-- Close button -->
+            <a href="Index.html">Tuis</a>
+            <a href="Tyd_Plek.html">Tyd en Plek</a>
+            <a href="Verrigtinge.html">Verrigtinge</a>
+            <a href="Geskenk_Tafel.html">Geskenk Tafel</a>
+            <a href="Blyplek.html">Blyplek</a>
+            <a href="RSVP.html">RSVP</a>
+            <a href="Ons_Twee.html">Ons Twee</a>
+        </div>
+        
+
+        <div class="container">
+            <div class="bruidspaar">
+                <p class="charm-bold">Ons Twee</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

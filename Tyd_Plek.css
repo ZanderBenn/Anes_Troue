@@ -1,0 +1,138 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background:rgb(10, 88, 104);
+    height: 50px;
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    position: fixed; /* Keeps it in place */
+    top: 0; /* Sticks to the top */
+    left: 0; /* Sticks to the left */
+    width: 100%; /* Stretches across the page */
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+header a {
+    margin: 0 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background:#c4f0f8;  
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.bruidspaar {
+    margin: 20px;
+}
+
+.details {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.voete {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.charm-bold {
+    font-family: "Charm", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+  }
+
+.pin {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    text-align: center;
+}
+
+.center-pin {
+    text-align: center;
+}
+
+.center-pin p {
+    margin-top: -15px;
+}
+
+a img {
+    transition: opacity 0.3s;
+}
+
+a img:hover {
+    opacity: 0.7; /* Fades slightly when hovered */
+}
+
+.background-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.floating-image-1 {
+    position: absolute;
+    width: 200px; /* Adjust size */
+    opacity: 0.8;
+    animation: floatAround 10s infinite alternate ease-in-out;
+    top: calc(10% + 80% * random());
+    left: calc(10% + 80% * random());
+}
+
+.floating-image-2 {
+    position: absolute;
+    width: 100px; /* Adjust size */
+    opacity: 0.8;
+    animation: floatAround 10s infinite alternate ease-in-out;
+    top: calc(10% + 80% * random());
+    left: calc(10% + 80% * random());
+}
+
+.floating-image-3 {
+    position: absolute;
+    width: 100px; /* Adjust size */
+    opacity: 0.8;
+    animation: floatAround 10s infinite alternate ease-in-out;
+    top: calc(10% + 80% * random());
+    left: calc(10% + 80% * random());
+}
+/* Animation for movement */
+@keyframes floatAround {
+    0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+    50% { transform: translateY(-50px) translateX(30px) rotate(10deg); }
+    100% { transform: translateY(50px) translateX(-30px) rotate(-10deg); }
+}
+
+.wrapper-main {
+    width: 1440px;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .wrapper-main {
+        width: 100%;
+    }
+}
